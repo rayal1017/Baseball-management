@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Amateur Baseball Federation of India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .header-left img.logo {
+            height: 80px;
+            width: auto;
+            margin-right: 20px;
+        }
+
+        .header-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .site-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2b58ab;
+        }
+
+        .site-subtitle {
+            font-size: 14px;
+            color: #2b58ab;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1;
+        }
+
+        .header-right a img {
+            height: 22px;
+            width: 22px;
+        }
+
+        .header-right img.icon {
+            height: 60px;
+            width: auto;
+            margin-left: 10px;
+        }
+
+        .nav-bar {
+            background-color: #002b66;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 10px;
+            font-size: 16px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #00449e;
+            border-radius: 4px;
+        }
+
+        .hero {
+            width: 100%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #002b66;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="top-header">
+    <!-- Left: Logo -->
+    <div class="header-left">
+        <img src="icon.png" alt="ABFI Logo" class="logo" />
+    </div>
+
+    <!-- Center: Title -->
+    <div class="header-center">
+        <div class="site-title">Amateur Baseball Federation of India</div>
+        <div class="site-subtitle">THE OFFICIAL SITE OF INDIAN BASEBALL</div>
+    </div>
+
+    <!-- Right: Social icons and logo -->
+    <div class="header-right">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" /></a>
+        <img src="abfi-logo.png" alt="Baseball India Icon" class="icon" />
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="nav-bar">
+    <a href="#">About</a>
+    <a href="#">Rules</a>
+    <a href="#">Events</a>
+    <a href="#">Schedule</a>
+    <a href="#">Participants</a>
+    <a href="#">Information</a>
+    <a href="#">Download</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact Us</a>
+</nav>
+
+<!-- Hero Image -->
+<div class="hero">
+    <img src="https://via.placeholder.com/1200x400?text=Event+Banner" alt="Banner" />
+</div>
+
+<!-- Footer -->
+<footer>
+    &copy; 2025 Amateur Baseball Federation of India
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
