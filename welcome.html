@@ -81,13 +81,20 @@
         .nav-bar {
             background-color: #002b66;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             padding: 10px 0;
+            gap: 20px;
             flex-wrap: wrap;
+            position: relative;
         }
 
-        .nav-bar a {
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-bar > .nav-item > a,
+        .nav-bar > a {
             color: white;
             text-decoration: none;
             padding: 6px 10px;
@@ -96,9 +103,58 @@
             transition: background-color 0.3s ease;
         }
 
-        .nav-bar a:hover {
+        .nav-bar a:hover,
+        .nav-item > a:hover {
             background-color: #00449e;
             border-radius: 4px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #00449e;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 10;
+            flex-direction: column;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0058cc;
+        }
+
+        .nav-item:hover .dropdown-content {
+            display: flex;
+        }
+
+        .sub-dropdown {
+            position: relative;
+        }
+
+        .sub-dropdown-content {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #0058cc;
+            min-width: 180px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex-direction: column;
+        }
+
+        .sub-dropdown:hover .sub-dropdown-content {
+            display: flex;
         }
 
         .hero {
@@ -125,18 +181,13 @@
 
 <!-- Header -->
 <div class="top-header">
-    <!-- Left: Logo -->
     <div class="header-left">
         <img src="icon.png" alt="ABFI Logo" class="logo" />
     </div>
-
-    <!-- Center: Title -->
     <div class="header-center">
         <div class="site-title">Amateur Baseball Federation of India</div>
         <div class="site-subtitle">THE OFFICIAL SITE OF INDIAN BASEBALL</div>
     </div>
-
-    <!-- Right: Social icons and logo -->
     <div class="header-right">
         <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
         <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
@@ -148,13 +199,87 @@
 
 <!-- Navigation -->
 <nav class="nav-bar">
-    <a href="#">About</a>
-    <a href="#">Rules</a>
+    <!-- About -->
+    <div class="nav-item">
+        <a href="#">About</a>
+        <div class="dropdown-content">
+            <a href="#">History</a>
+            <a href="#">Constitution ABFI</a>
+            <a href="#">International Recognition</a>
+            <a href="#">Registration</a>
+            <a href="#">Affiliates</a>
+            <a href="#">Executive Committee</a>
+        </div>
+    </div>
+
+    <!-- Rules -->
+    <div class="nav-item">
+        <a href="#">Rules</a>
+        <div class="dropdown-content">
+            <div class="sub-dropdown">
+                <a href="#">Basics ▸</a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Keeping Score</a>
+                    <a href="#">Baseball Lingo</a>
+                    <a href="#">Abbreviation</a>
+                    <a href="#">Stats 101</a>
+                </div>
+            </div>
+            <a href="#">Baseball Rules</a>
+            <div class="sub-dropdown">
+                <a href="#">Play Baseball ▸</a>
+                <div class="sub-dropdown-content">
+                    <a href="#">4 Skills of Baseball</a>
+                    <a href="#">Batting Order</a>
+                    <a href="#">Fielding Position</a>
+                    <a href="#">Why Play Baseball</a>
+                </div>
+            </div>
+            <a href="#">Manual</a>
+        </div>
+    </div>
+
     <a href="#">Events</a>
-    <a href="#">Schedule</a>
-    <a href="#">Participants</a>
-    <a href="#">Information</a>
-    <a href="#">Download</a>
+
+    <!-- Schedule -->
+    <div class="nav-item">
+        <a href="#">Schedule</a>
+        <div class="dropdown-content">
+            <a href="#">Forthcoming Events</a>
+            <a href="#">Calendar Events</a>
+        </div>
+    </div>
+
+    <!-- Participants -->
+    <div class="nav-item">
+        <a href="#">Participants</a>
+        <div class="dropdown-content">
+            <a href="login.html">User Login</a> <!-- ← This is the linking line -->
+            <a href="#">Roster</a>
+            <a href="cert_verify.php">Certificates</a>
+        </div>
+    </div>
+    <!-- Information -->
+    <div class="nav-item">
+        <a href="#">Information</a>
+        <div class="dropdown-content">
+            <a href="#">Committees</a>
+            <a href="#">Accounts</a>
+            <a href="#">RTI</a>
+            <a href="#">Website Information</a>
+        </div>
+    </div>
+
+    <!-- Download -->
+    <div class="nav-item">
+        <a href="#">Download</a>
+        <div class="dropdown-content">
+            <a href="#">Roster Form</a>
+            <a href="#">Team Roster</a>
+            <a href="#">Score Sheet</a>
+        </div>
+    </div>
+
     <a href="#">Gallery</a>
     <a href="#">Contact Us</a>
 </nav>
@@ -171,6 +296,7 @@
 
 </body>
 </html>
+
 
 
 
